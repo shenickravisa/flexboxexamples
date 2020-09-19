@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: lightgray;
+}
+
+.contenedor {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+/*
+todo lo que este dentro de un div y que su clase empiece por item-
+*/
+div[class*="item-"]{
+    background: orange;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid gray;
+    flex-basis: 500px;
+    flex-grow: 1;
+}
+
+/*
+todo lo que este dentro de un div y que ademas sean impares
+*/
+div[class*="item-"]:nth-child(odd){
+    background-color: black;
+    color: white;
+}
+div[class*="item-"]:nth-child(5){
+    background-color: aquamarine;
+    flex-basis: 300px;
+    color: white;
+    flex-grow: 4;
+}
+
+/*
+flex-basis reparte dentro del espacio maximo view port una proporcion para cada elemento,
+cuando es una cantidad que supera el tamaño simplemente reparte en proporciones iguales hasta completar el view port 
+
+Si lo que queremos es que tome el flex-basis total sin importar el view port aunque cree una nueva columna debemos usar
+flex-wrap: wrap
+
+si nuestro contenedor padre tiene una altura predefinida y queremos agrupar o ordenar usamos 
+align-content
+
+flex-grow va dentro del contenedor hijo del display flex y con base al espacio libre que queda del flex basis usando flex wrap 
+se reparte esa proporcion al 100% del espacio del contenedor original 
+!importante flex grow solo afecta cuando se tiene flex wrap
+
+en columnas no hay restricciones el heigh se toma del basis
+si le forzamos una altura fija en columnas se empezaran a hacer filas por que ya tenemos una restriccion
+*/

@@ -9,9 +9,9 @@ body{
     display: flex;
     font-size: 20px;
     align-items: center;
-    height: 100vh;
-    flex-wrap: wrap;
-    flex-direction: column;
+    /* height: 100vh; */
+    /* flex-wrap: wrap; ocultamos para probar el flex-shrink; */
+    /* flex-direction: column; */
 }
 /*
 todo lo que este dentro de un div y que su clase empiece por item-
@@ -21,7 +21,7 @@ div[class*="item-"]{
     padding: 10px;
     text-align: center;
     border: 2px solid gray;
-    flex-basis: 500px;
+    flex-basis: 50px;
     flex-grow: 1;
 }
 
@@ -34,9 +34,10 @@ div[class*="item-"]:nth-child(odd){
 }
 div[class*="item-"]:nth-child(5){
     background-color: aquamarine;
-    flex-basis: 300px;
+    flex-basis: 600px;
     color: white;
     flex-grow: 4;
+    flex-shrink: 2;
 }
 
 /*
@@ -60,4 +61,6 @@ flex-wrap si hay un width inicial y indicamos wrap tomara todo el viewport crean
 flex grow: gestiona cuando hay espacio sobrante
 flex-basis: establece un ancho y un alto dependiendo del flex direction
 flex-shrink: cuanto de si mismo se hara pequeño cuando no haya espacio suficiente en el view port esto referente a los demas
+
+nota con flex wrap no sirve flex-shrink y flex flex grow
 */

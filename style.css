@@ -55,4 +55,9 @@ se reparte esa proporcion al 100% del espacio del contenedor original
 
 en columnas no hay restricciones el heigh se toma del basis
 si le forzamos una altura fija en columnas se empezaran a hacer filas por que ya tenemos una restriccion
+
+flex-wrap si hay un width inicial y indicamos wrap tomara todo el viewport creando filas en caso de que llege al limite
+flex grow: gestiona cuando hay espacio sobrante
+flex-basis: establece un ancho y un alto dependiendo del flex direction
+flex-shrink: cuanto de si mismo se hara pequeño cuando no haya espacio suficiente en el view port esto referente a los demas
 */
